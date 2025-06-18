@@ -57,6 +57,9 @@ const Store = () => {
                   label={cat.category}
                   status={cat.status}
                   index={index}
+                  onChange={(value) =>
+                    handleChangeCategory(value, cat.category)
+                  }
                 />
               ))}
             </div>
