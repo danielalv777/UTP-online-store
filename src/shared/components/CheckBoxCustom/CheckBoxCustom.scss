@@ -1,0 +1,46 @@
+.checkbox-control-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.checkbox-control {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #202227;
+  background-color: #ffffff;
+}
+.checkbox-control.Selected {
+  background-color: #202227;
+  color: #b1e457;
+}
+.checkbox-control.error-checkbox {
+  border-color: rgb(250, 10, 10);
+}
+.span-title-checkbox {
+  margin-left: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #202227;
+}
+.span-title-checkbox.error-checkbox-span {
+  color: rgb(250, 10, 10);
+}
+.error-message-checkbox {
+  font-size: 10px;
+  font-weight: 400;
+  color: rgb(250, 10, 10);
+}
+
+@media (max-width: 890px) {
+  .span-title-checkbox {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+}

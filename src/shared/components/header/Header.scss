@@ -1,0 +1,21 @@
+.header {
+  height: 60px;
+  // width: 100%;
+  padding: 1rem;
+  background-color: #202227;
+
+  nav {
+    width: inherit;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & .span-title-header {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 0.5rem;
+    color: #b1e457;
+  }
+}

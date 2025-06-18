@@ -1,0 +1,95 @@
+.store-container {
+  width: 100%;
+  padding: 1rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.filter-store {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.5rem;
+
+  h3 {
+    color: #202227;
+  }
+  & .span-categorias {
+    color: #202227;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #202227;
+  }
+  .container-checkbox-store {
+    display: block;
+  }
+  .container-checkbox-store-mobile {
+    display: none;
+  }
+  .check-box-container {
+    margin-bottom: 0.25rem;
+  }
+  .categories-laoder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.body-store {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  gap: 0.5rem;
+
+  .product-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-dashboard {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .store-container {
+    padding: 1rem 1rem;
+    flex-direction: column;
+  }
+  .filter-store {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #202227;
+
+    .container-checkbox-store {
+      display: none;
+    }
+    .container-checkbox-store-mobile {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      gap: 0.5rem;
+      overflow-x: auto;
+    }
+  }
+  .body-store {
+    padding: 0;
+  }
+}

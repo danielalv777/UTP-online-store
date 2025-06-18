@@ -1,0 +1,14 @@
+.tag-container {
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  height: fit-content;
+
+  span {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

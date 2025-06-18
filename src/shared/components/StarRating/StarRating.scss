@@ -1,0 +1,34 @@
+.star-rating {
+  display: flex;
+  gap: 1px;
+  font-size: 24px;
+
+  .star {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #de7921;
+    text-shadow: none;
+
+    &.filled {
+      color: #de7921;
+      -webkit-text-stroke: 0;
+    }
+
+    &.half {
+      color: #ffffff;
+      -webkit-text-stroke: 1px #de7921;
+
+      &::before {
+        content: '★';
+        color: #de7921;
+        position: absolute;
+        width: 50%;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        -webkit-text-stroke: 0;
+      }
+    }
+  }
+}
