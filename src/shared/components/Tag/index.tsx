@@ -7,7 +7,7 @@ interface TagProps {
   status: boolean;
   label: string;
   index: number;
-  onChange: (selectedValue: boolean) => void;
+  onChange?: (selectedValue: boolean) => void;
 }
 
 const Tag: React.FC<TagProps> = ({ status, label, index, onChange }) => {
