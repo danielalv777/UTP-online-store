@@ -51,7 +51,7 @@ npm run dev
 src/
 ├── app/               # Configuración global (zustand, rutas)
 ├── assets/            # Imágenes y recursos estáticos
-├── features/          # Login, dashboard, info de pokémon
+├── features/          # Store (dashboard de productos), filtros, carrito
 ├── services/          # Llamadas a la API
 ├── shared/            # Contiene todos los componentes reutilizables del app
 └── App.tsx            # Componente principal
