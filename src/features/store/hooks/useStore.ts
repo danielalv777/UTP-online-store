@@ -9,6 +9,7 @@ import type {
 } from '../types/store';
 import { getProductById } from '../services/getProductById';
 import { useCartStore } from '../../../store/cartStore';
+import { toast } from 'react-toastify';
 
 export function useStore() {
   const productsCart = useCartStore((state) => state.products);
@@ -46,6 +47,7 @@ export function useStore() {
       prod.id === product.id ? { ...prod, stock: 0 } : prod
     );
     setProducts(newProducts);
+    toast.success(`Producto "${product.title}" agregado`);
   };
 
   const handleDeleteProduct = (product: ProductStock) => {
@@ -54,6 +56,7 @@ export function useStore() {
       prod.id === product.id ? { ...prod, stock: 1 } : prod
     );
     setProducts(newProducts);
+    toast.warning(`Producto "${product.title}" eliminado`);
   };
 
   const handleOpenModal = async (productId: number) => {

@@ -23,8 +23,10 @@ const CartSlideOver = ({
     <div className={`cart-slide-over ${isOpen ? 'open' : ''}`}>
       <div className="cart-slide-over__header">
         <div>
-          <h2>Your Cart</h2>
-          {items.length > 0 && <span onClick={hanldeClear}>Clean Cart</span>}
+          <h2>Tú carrito</h2>
+          {items.length > 0 && (
+            <span onClick={hanldeClear}>Limpiar el carrito</span>
+          )}
         </div>
         <button onClick={onClose} className="cart-slide-over__close">
           ✕

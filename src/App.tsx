@@ -1,9 +1,10 @@
 // Libraries
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import './App.scss';
+import { ToastContainer } from 'react-toastify';
 import { Header } from './shared/components/header';
 import { Store } from './features/store/pages/store';
+import './App.scss';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Store />} />
         </Routes>
+        <ToastContainer position="top-right" autoClose={2000} />
       </>
     </Router>
   );

@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# 🧩 Tienda Online App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web creada con **React + TypeScript** que consume la [DummyJSON](https://dummyjson.com/docs/products#products-category) para mostrar una lista de Productos con imágenes, datos del detalle de cada producto, y navegación por páginas. Incluye un modal para mostrar el detalle del producto, mensajes de validacion con Swiftalert2, push notifications con React-Toastify, el uso de Zutand para el manejo de estados globales. La palicacion tambien esta adaptada para ser responsiva (escritorio y mobile).
 
-Currently, two official plugins are available:
+### 🔗 Demo desplegada en Vercel:
+👉 [https://utp-online-store.vercel.app/](https://utp-online-store.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📺 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📄 **Dashboard** con listado paginado de Productos.
+- 📃 **Pantalla de detalle** para ver nombre, imagen, rating e informacion relevante del producto.
+- 📱 Diseño **responsive** (Flex adaptable para dispositivos mobiles y de escritorio).
+- 🌐 Despliegue automático en **Vercel**.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## ⚙️ Cómo ejecutar el proyecto localmente
+
+1. Clonar el repositorio
+
+```ts
+git clone https://github.com/danielalv777/UTP-online-store.git
+cd UTP-online-store
+
+```
+2. Instalar dependencias y Ejecutar el entorno de desarrollo
+
+```ts
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧪 Tecnologías utilizadas
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+  - ⚛️ React + Vite
+  - 💅 SCSS Modules
+  - 🪝 React Hooks
+  - 🧠 Zustand (manejo de estado global)
+  - 📡 Fetch API
+  - 🧪 TypeScript
+  - 💅 SwiftAlert2
+  - 💅 React-Toastify
+
+## 📦 Estructura del proyecto
+
+```ts
+src/
+├── app/               # Configuración global (zustand, rutas)
+├── assets/            # Imágenes y recursos estáticos
+├── features/          # Login, dashboard, info de pokémon
+├── services/          # Llamadas a la API
+├── shared/            # Contiene todos los componentes reutilizables del app
+└── App.tsx            # Componente principal
 ```
+---
+
+## ✨ Autor
+
+Desarrollado por Jahil Alvarez como proyecto "Tienda Online" de práctica con la API DummyJSON.
