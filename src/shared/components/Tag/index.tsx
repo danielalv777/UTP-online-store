@@ -26,7 +26,10 @@ const Tag: React.FC<TagProps> = ({ status, label, index, onChange }) => {
   };
 
   useEffect(() => {
-    setSelected(status);
+    setSelected((prev) => {
+      if (prev !== status) return status;
+      return prev;
+    });
   }, [status]);
 
   return (

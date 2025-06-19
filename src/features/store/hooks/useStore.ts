@@ -28,17 +28,23 @@ export function useStore() {
   const [totalCount, setTotalCount] = useState(0);
 
   const limit = 10;
-  // const offset = (currentPage - 1) * limit;
   const totalPages = Math.ceil(totalCount / limit);
 
   const handleChangeCategory = async (status: boolean, value: string) => {
-    setCategories((prev) =>
-      prev.map((cat) => ({
-        ...cat,
-        status: cat.category === value ? status : false,
-      }))
-    );
     setSelectCategory(status ? value : null);
+    setCategories((prev) => {
+      const updated = prev.map((cat) => {
+        const shouldBeActive = cat.category === value ? status : false;
+        return {
+          ...cat,
+          status: shouldBeActive,
+        };
+      });
+
+      // Solo actualiza si algo cambió
+      const isSame = prev.every((cat, i) => cat.status === updated[i].status);
+      return isSame ? prev : updated;
+    });
   };
 
   const handleAddProduct = (product: ProductStock) => {

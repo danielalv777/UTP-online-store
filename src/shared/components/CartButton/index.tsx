@@ -22,7 +22,9 @@ const CartButton: React.FC<CartProps> = ({
       className={classnames([className, 'cart-container'])}
       onClick={handleClick}
     >
-      {totalAmount && totalAmount > 0 && <p>US$ {totalAmount.toFixed(2)}</p>}
+      {totalAmount && totalAmount > 0 ? (
+        <p>US$ {totalAmount.toFixed(2)}</p>
+      ) : null}
 
       <CartIcon />
 
