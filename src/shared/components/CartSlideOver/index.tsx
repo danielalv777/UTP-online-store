@@ -55,7 +55,7 @@ const CartSlideOver = ({
 
       <div className="cart-slide-over__footer">
         <span>Total</span>
-        <span>US$ {totalPrice}</span>
+        <span>US$ {totalPrice.toFixed(2)}</span>
       </div>
     </div>
   );
