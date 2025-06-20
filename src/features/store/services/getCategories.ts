@@ -14,7 +14,7 @@ const getAllCategories = async () => {
     return allCategories;
   } catch (error) {
     console.error('Error get Categories:', error);
-    throw new Error(`Error: ${error}`);
+    return [];
   }
 };
 

@@ -86,27 +86,29 @@ const Store = () => {
               />
             ))}
 
-            <div className="footer-dashboard">
-              <div className="pagination">
-                <button
-                  disabled={currentPage === 1 || isLoadingProducts}
-                  onClick={() => setCurrentPage((prev) => prev - 1)}
-                >
-                  Anterior
-                </button>
+            {products.length > 0 ? (
+              <div className="footer-dashboard">
+                <div className="pagination">
+                  <button
+                    disabled={currentPage === 1 || isLoadingProducts}
+                    onClick={() => setCurrentPage((prev) => prev - 1)}
+                  >
+                    Anterior
+                  </button>
 
-                <span>
-                  Página {currentPage} de {totalPages}
-                </span>
+                  <span>
+                    Página {currentPage} de {totalPages}
+                  </span>
 
-                <button
-                  disabled={currentPage === totalPages || isLoadingProducts}
-                  onClick={() => setCurrentPage((prev) => prev + 1)}
-                >
-                  Siguiente
-                </button>
+                  <button
+                    disabled={currentPage === totalPages || isLoadingProducts}
+                    onClick={() => setCurrentPage((prev) => prev + 1)}
+                  >
+                    Siguiente
+                  </button>
+                </div>
               </div>
-            </div>
+            ) : null}
           </>
         )}
 
