@@ -60,4 +60,4 @@ src/
 
 ## ✨ Autor
 
-Desarrollado por Jahil Alvarez como proyecto "Tienda Online" de práctica con la API DummyJSON.
+Desarrollado por Jaime Huayaconza Chipani como proyecto "Tienda Online" de práctica con la API DummyJSON.
